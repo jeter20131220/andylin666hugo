@@ -1,0 +1,50 @@
+<head>
+    <!-- {{ partial "analytics" . }} -->
+    <!-- {{- if .Site.Params.Analytics.Yandexmetrica.Enabled -}}
+    {{ partial "metrica.html" . }}
+    {{- end -}} -->
+    <title>{{site.Title}}{{if not .IsHome}} | {{.Title}}{{end}}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+    <link rel="apple-touch-icon" sizes="180x180" href='{{ "favicon/apple-touch-icon.png" | relURL }}'>
+    <link rel="icon" type="image/png" sizes="32x32" href='{{ "favicon/favicon-32x32.png" | relURL }}'>
+    <link rel="icon" type="image/png" sizes="16x16" href='{{ "favicon/favicon-16x16.png" | relURL }}'>
+    <!-- <link rel="manifest" href='{{ "favicon/site.webmanifest" | relURL }}' /> -->
+    <!-- <link rel="mask-icon" href=' {{ "favicon/safari-pinned-tab.svg" | relURL }}' color="#5bbad5" /> -->
+    <link rel="shortcut icon" type="image/x-icon" sizes="64x64" href='{{ "favicon/favicon.png" | relURL }}' />
+    <meta name="theme-color" content="#ffffff">
+    <meta property="og:title" content="{{site.Title}}{{if not .IsHome}} | {{.Title}}{{end}}" />
+    {{ $styles := resources.Get "css/style.css" | postCSS }}
+    {{ if .Site.IsServer }}
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" />
+    {{ else }}
+    {{ $styles := $styles | minify | fingerprint | resources.PostProcess }}
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" />
+    {{ end }}
+    <link href=' {{ "css/blonde.min.css" | relURL }}' rel="stylesheet" type="text/css" media="print"
+        onload="this.media=' all'">
+    {{ partial "seo/print.html" . }}
+    {{ block "header_css" . }}{{ end }}
+    <link rel="stylesheet" href='{{ "css/custom.css" | relURL }}'>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/vs2015.min.css" rel="stylesheet">
+
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css" rel="stylesheet"> -->
+
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css"> -->
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script> -->
+    <script>hljs.highlightAll();</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z7GL3FWMNX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-Z7GL3FWMNX');
+    </script>
+    <i class="dark hidden"></i>
+    <a href="" target="_blank"></a>
+</head>

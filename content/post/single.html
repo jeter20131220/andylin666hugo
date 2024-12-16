@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+{{ partial "head_single.html" . }}
+
+<style>
+    h3 {
+        padding-left: 20px;
+        margin: 30px 0;
+        font-size: 1.8rem;
+        font-weight: bold;
+        border-left: 4px solid #ea5413;
+        letter-spacing: 2px;
+    }
+
+    .container p {
+        font-size: 16px;
+        letter-spacing: 3px;
+        line-height: 32px;
+        margin-bottom: 50px;
+    }
+
+    .container {
+        max-width: 50%;
+    }
+
+    /* 针对小屏幕设备（如手机） */
+    @media (max-width: 600px) {
+        .container {
+            max-width: 90%;
+            /* 在小屏幕上容器宽度限制为父元素的90% */
+        }
+    }
+
+    /* 针对中等屏幕设备（如平板） */
+    @media (max-width: 992px) {
+        .container {
+            max-width: 90%;
+            /* 在平板上容器宽度限制为父元素的75% */
+        }
+    }
+
+    /* 针对大屏幕设备（如桌面） */
+    @media (min-width: 1200px) {
+        .container {
+            max-width: 50%;
+            /* 在桌面上容器最大宽度为父元素的50% */
+        }
+    }
+
+
+
+    .video-box {
+        width: 100%;
+        padding-bottom: 56%;
+    }
+</style>
+
+<body>
+    <iframe src="https://cmm.ai/chuz/#/" width="375px" height="700px"
+        style="position: fixed; bottom: 10px; right: 3px; border: none; z-index: 1000; overflow: hidden;"
+        scrolling="no"></iframe>
+    {{ partial "navbar.html" . }}
+
+    <section class="aicustomerSec01">
+        <img class="img-fluid" src="/img/aicustomer/choozmoAiCustomer.webp" alt="choozmoAiCustomer">
+        <div class="aicustomerSec01_cta_arrow text-center">
+            <a href="#ctablock">
+                <div class="arrow-wave">
+                    <span></span>
+                    <span></span>
+
+                </div>
+            </a>
+        </div>
+
+    </section>
+
+    <section class="aicustoerSec02">
+        <h2 class="aicustoerSec02-title">
+            ChoozMo AI 客服優勢
+        </h2>
+        <img class="aicustomer-title-line" src="/img/aicustomer/aicustomer-title.png" alt="">
+        <div>
+            <div class="container">
+                <div class="video-box mb-5">
+                    <iframe src="https://www.youtube.com/embed/fqLmn1OLH74" title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+                <p>隨著人工智慧（AI）技術的快速發展，AI智能客服逐漸成為現代企業提升客戶體驗的核心工具之一。透過高度擬真的AI技術和影像識別能力，企業能夠打造出具有人格化、互動性強的客服代表，為顧客提供更加個性化和高效的服務。
+                </p>
+                <div class="d-flex justify-content-center mb-5">
+                    <a href="#news-form" class="submit-btn mb-3"> 立即諮詢</a>
+                </div>
+                <h3 id="一建生成AI客服"><strong> 一鍵生成AI客服</strong></h3>
+                <img class="img-fluid" src="/img/aicustomer/webv1.webp" alt="">
+                <p>一鍵生成AI客服，支持手機、平板、Kiosk、電腦等多種裝置，實現無縫跨平台體驗。數字人虛擬形象，精準對嘴互動，提供多語言服務，讓顧客享受真實流暢的對話體驗。專屬後台管理系統，簡單自訂客服流程，快速響應顧客需求，有效提升客戶滿意度及品牌形象，幫助企業更高效地運營與拓展。
+                </p>
+                <h3 id="高度擬真Ai技術"><strong> 高度擬真AI客服技術</strong></h3>
+                <p>AI智能影像客服的核心技術基於Generative
+                    AI（生成式人工智慧）和深度學習模型，能夠生成具備擬真外觀與語言的客服人物。這些虛擬客服不僅能夠模擬真人的面部表情、肢體動作，還能進行流暢的語音對話，讓客戶在互動中有更真實、更具情感的體驗。無論是基本的查詢、複雜的問題解答，還是情感交互，AI客服都能靈活應對，並提升整體的客戶滿意度。
+                </p>
+                <h3 id="語言多樣性"><strong> 語言多樣性與市場拓展</strong></h3>
+                <p>自家訓練的語言模型（LLM）支持超過20種語言，涵蓋全球多個市場的語言需求，從英語、中文、西班牙語到日語、韓語等，無論在哪個語言區域，企業都能提供無縫的客服體驗。這樣的語言多樣性不僅能夠打破語言障礙，還能幫助企業進一步拓展國際市場，實現全球化業務的快速推廣。
+                </p>
+
+                <h3 id="語言多樣性"><strong>24/7 全天候服務</strong></h3>
+                <p>AI智能影像客服最大的一個優勢在於其無需休息的特性。它能夠實現24小時全天候服務，即使在高峰期或非工作時間，依然能快速回應顧客的查詢和需求。無論是跨時區的用戶，還是緊急的技術支持需求，都可以即時處理，進一步提升了顧客的滿意度與忠誠度，從而促進企業與客戶之間長期穩定的關係。
+                </p>
+                <img class="img-fluid mb-5" src="/img/aicustomer/aicustomer.webp" alt="">
+                <h3 id="語言多樣性"><strong>ChooZmo AI智能客服應用實例</strong></h3>
+                <img class="img-fluid" src="/img/aicustomer/2024meettaipei.webp" alt="">
+                <p> ▲ 2024 Meet Taipei 創新創業嘉年華開幕式展現出數位時代專屬AI主播魏時黛參與互動</p>
+                <img class="img-fluid mb-3" src="/img/aicustomer/aicustomer3.webp" alt="">
+                <p> ▲ 零售場域導入AI客服，提供中英日韓多語言服務，機場專櫃整合引導，提升顧客互動體驗。</p>
+                <img class="img-fluid mb-3" src="/img/aicustomer/aicustomer4.webp" alt="">
+
+                <p> ▲ 日照中心導入台語AI客服，提供親切流暢的語音互動，提升顧客服務體驗。</p>
+                <div id="news-form" class="news-form mt-0">
+                    <div class="text-center title">
+                        <h4>線上諮詢</h4>
+                        <p>與我們合作，馬上展開全新的創作里程碑</p>
+                    </div>
+                    <form>
+                        <div class="mb-4 align-items-center">
+                            <label for="nameValue">
+                                聯繫人稱呼 <span class="text-danger">*</span>
+                            </label>
+                            <div class="mt-2">
+                                <input type="text" class="form-control" id="nameValue" placeholder="請留下聯繫人稱呼" required>
+                            </div>
+                        </div>
+
+                        <div class="row mb-4 align-items-center">
+                            <label for="phoneValue">
+                                聯絡電話 <span class="text-danger">*</span>
+                            </label>
+                            <div class="mt-2 col-sm-4">
+                                <select id="countryCode" class="form-select">
+                                    <option selected>選擇國碼</option>
+                                </select>
+                            </div>
+                            <div class="mt-3 mt-sm-2 col-sm-8">
+                                <input type="tel" class="form-control" id="phoneCode" placeholder="e.g., 988 888 888"
+                                    required>
+                            </div>
+                        </div>
+
+                        <div class="mb-4 align-items-center">
+                            <label for="emailValue">
+                                電子信箱 <span class="text-danger">*</span>
+                            </label>
+                            <div class="mt-2">
+                                <input type="email" class="form-control" id="emailValue" placeholder="請留下 E-mail"
+                                    required>
+                            </div>
+
+                            <div class="invalid-feedback">
+                                Please choose a username.
+                            </div>
+                        </div>
+
+                        <!-- <div class="mb-4 align-items-center">
+                            <label for="dateValue">
+                                預計執行日期 <span class="text-danger">*</span>
+                            </label>
+                            <div class="mt-2 d-flex align-items-center">
+                                <input type="date" id="dateValue" name="dateValue" class="px-2"
+                                    style="border:1px solid #ced4da; border-radius: 3px;" required />
+                            </div>
+                        </div> -->
+
+                        <div class="mb-4 align-items-center">
+                            <label for="captionValue">
+                                需求說明 <span class="text-danger">*</span>
+                            </label>
+                            <div class="mt-2">
+                                <textarea class="form-control" id="captionValue" rows="3" placeholder="請簡述說明"
+                                    required></textarea>
+                            </div>
+                        </div>
+
+                        <div class="mb-4 align-items-center">
+                            <label for="companyValue">
+                                公司名稱 (非必填)
+                            </label>
+                            <div class="mt-2">
+                                <input type="text" class="form-control" id="companyValue" placeholder="請留下公司名稱">
+                            </div>
+                        </div>
+
+                        <div class="mb-4 align-items-center">
+                            <label for="companyValue">
+                                LINE ID (非必填)
+                            </label>
+                            <div class="mt-2">
+                                <input type="text" class="form-control" id="lineidValue" placeholder="請留下 LINE ID">
+                            </div>
+                        </div>
+
+                        <div class="mt-2">
+                            <div class="form-check">
+                                <input class="form-check-input mt-2" type="checkbox" id="agreeValue">
+                                <label class="form-check-label w-100" for="agreeValue">
+                                    本人同意集仕多搜集資料
+                                </label>
+                            </div>
+                        </div>
+
+                        <div style="height: 15px;">
+                            <span class="errorText text-danger">尚有欄位未填寫</span>
+                        </div>
+
+                        <div class="d-flex justify-content-center mt-5">
+
+                            <button type="submit" class="submit-btn" id="submitBtn">
+                                <span class="spinner-border spinner-border-sm me-2 loading-btn" role="status"
+                                    aria-hidden="true"></span>
+                                提交
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- <div class="aicustoerSec02-1 row">
+                <div class="col-lg-3">
+                    <img class="img-fluid" src="/img/aicustomer/aicustomer1.png" alt="">
+                    <p>以Generative AI技術為核心，客製化專屬AI客服人物，為客戶提供多元服務，提高整體客戶體驗。
+                    </p>
+                </div>
+                <div class="col-lg-3">
+                    <img class="img-fluid" src="/img/aicustomer/aicustomer2.png" alt="">
+                    <p>自家LLM訓練精準多語言，支援20+國語言，提供了更廣泛的可能性，並且
+                        有助於打入不同的市場。
+                    </p>
+                </div>
+                <div class="aisec02img-3 col-lg-3">
+                    <img class="img-fluid" src="/img/aicustomer/aicustomer3.png" alt="">
+                    <p>提供24小時即時支援，無需休息或輪班，因此可以快速回應客戶查詢和需求，提高滿意度和忠誠度。</p>
+                </div>
+            </div> -->
+        </div>
+    </section>
+
+
+
+    <section class="aicustoerSec06">
+        <h2>
+            ChoozMo AI 客服常見問題
+        </h2>
+        <img class="aicustomer-title-line" src="/img/aicustomer/aicustomer-title.png" alt="">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="accordion solution-accordion pb-1 pt-5" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading_1">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse_1" aria-expanded="true" aria-controls="collapse_1">
+                                1. 與真人客服相比，AI智慧客服有哪些優勢？
+                            </button>
+                        </h2>
+                        <div id="collapse_1" class="accordion-collapse collapse show" aria-labelledby="heading_1"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                AI客服可以全天候提供幫助，無需休息或輪班、也能支援翻譯（中英日韓）等。
+                                <br><br>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading_2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse_2" aria-expanded="true" aria-controls="collapse_2">
+                                2.AI智能客服能否與現有系統和平臺整合？
+                            </button>
+                        </h2>
+                        <div id="collapse_2" class="accordion-collapse collapse" aria-labelledby="heading_2"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                可以，我們的AI客服可以與現有網站、APP、各種螢幕顯示裝置（如平板、觸控螢幕、Kiosk售票機等）串接。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading_3">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse_3" aria-expanded="true" aria-controls="collapse_3">
+                                3. AI客服系統是否支援多語言和多渠道溝通？
+                            </button>
+                        </h2>
+                        <div id="collapse_3" class="accordion-collapse collapse" aria-labelledby="heading_3"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                可以，目前可支援中文、英文、日文、韓文。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading_4">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse_4" aria-expanded="true" aria-controls="collapse_4">
+                                4.AI智能客服可以提供即時支援和回應客戶查詢嗎？
+                            </button>
+                        </h2>
+                        <div id="collapse_4" class="accordion-collapse collapse" aria-labelledby="heading_3"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                AI客服可以提供即時支援和回應客戶查詢，而且能夠同時處理多個查詢不受限制。
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading_4">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse_4" aria-expanded="true" aria-controls="collapse_4">
+                                5.智能聊天機器人是什麼？
+                            </button>
+                        </h2>
+                        <div id="collapse_4" class="accordion-collapse collapse" aria-labelledby="heading_3"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                人工智慧 (AI) 聊天機器人是可以使用自然語言理解 (NLU)或自然語言處理 (NLP) 和機器學習 (ML)
+                                進行類似人類對話的應用程式或介面。人工智慧聊天機器人與標準聊天機器人的不同之處在於，它們利用大型語言模型 (LLM) 與傳統對話流和預先編程回應來產生對文字和語音輸入的回應。
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading_5">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse_5" aria-expanded="true" aria-controls="collapse_5">
+                                6.AI客服是否需要另外下載app使用?
+                            </button>
+                        </h2>
+                        <div id="collapse_5" class="accordion-collapse collapse" aria-labelledby="heading_3"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                AI客服無論KIOSK或是手機皆以網頁運行，故不需要另外下載app。
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="col-lg-4">
+
+                <img class="img-fluid" src="/img/aicustomer/aicustomerfaq.webp" alt="">
+
+            </div>
+        </div>
+    </section>
+
+    <section id="aicustoerCta" class="sec-action pb-5">
+        <div class="container-fluid">
+            <div class="action-clip text-center">
+                <h2 class="mb-0" style="line-height: 46px;">
+                    你不會的，AI 都能做
+                    <br>
+                    Choozmo 多語言 AI 客服
+
+                </h2>
+            </div>
+            <div class="action-triangle">
+            </div>
+        </div>
+        <div class="container text-center">
+            <a class="action-btn" href="#ctablock">
+                立即擁有Ai客服
+
+            </a>
+        </div>
+    </section>
+
+
+    {{ partial "footer.html" . }}
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+    <script src="//code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+    <script src="//code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script type="module">
+
+
+        // 電話國碼
+        const countryCodes = [
+            '+1',   // 美國
+            '+7',   // 俄羅斯
+            '+33',  // 法國
+            '+39',  // 義大利
+            '+44',  // 英國
+            '+46',  // 瑞典
+            '+47',  // 挪威
+            '+49',  // 德國
+            '+52',  // 墨西哥
+            '+60',  // 馬來西亞
+            '+61',  // 澳大利亞
+            '+62',  // 印尼
+            '+64',  // 紐西蘭
+            '+65',  // 新加坡
+            '+66',  // 泰國
+            '+81',  // 日本
+            '+82',  // 南韓
+            '+86',  // 中國大陸
+            '+91',  // 印度
+            '+353', // 愛爾蘭
+            '+852', // 香港
+            '+853', // 澳門
+            '+886', // 台灣
+        ];
+
+        console.log(countryCodes);
+        const countryCode = document.getElementById('countryCode');
+        countryCodes.forEach(code => {
+            const option = document.createElement('option');
+            option.value = code;
+            option.text = code;
+            countryCode.appendChild(option);
+        });
+
+
+        $('.errorText').hide();
+        $('.loading-btn').hide();
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzuwioqhnP2oL0AdHaYgEBvf0t0yWi2OTxZYlPYSoLuPyHhQFJKMm5mgOCoZEx-cIckbA/exec';
+
+
+        async function send() {
+            console.log('addEventListener');
+            let name = document.querySelector('#nameValue').value; // 聯絡人
+            let phone; // 聯絡電話
+            let company = document.querySelector('#companyValue').value; // 公司名稱
+            let email = document.querySelector('#emailValue').value; // 電子信箱
+            // let demand; // 需求目的
+            let caption = document.querySelector('#captionValue').value; // 需求說明
+            let lineid = document.querySelector('#lineidValue').value; // 需求說明
+            // let date = document.querySelector('#dateValue').value; // 預計活動需求日
+            let agree; // 搜集資料
+            let time; // 填單時間
+
+            // 取得當下時間
+            const now = new Date();
+            const options = { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' };
+            time = now.toLocaleString('zh-TW', options);
+            console.log('time', time);
+
+            if (document.querySelector('input[id="agreeValue"]:checked')) {
+                agree = "同意";
+            } else {
+                agree = "不同意";
+            }
+
+            // if (document.querySelector('input[name="demandValue"]:checked')) {
+            //   demand = document.querySelector('input[name="demandValue"]:checked').value;
+            // }
+
+            // if (demand === "其他") {
+            //   demand = document.querySelector('#otherText').value;
+            // }
+
+            let countryCode = document.querySelector('#countryCode').value; // 國碼
+            let phoneCode = document.querySelector('#phoneCode').value; // 電話號碼
+
+            phone = `${countryCode} ${phoneCode}`;
+
+            const insertdata = {
+                "name": name,
+                "phone": phone,
+                "company": company,
+                "email": email,
+                "lineid": lineid,
+                "caption": caption,
+                // "date": date,
+                "agree": agree,
+                "time": time
+            }
+
+            console.log(insertdata);
+
+            $.ajax({
+                url: scriptURL,
+                method: "post",
+                data: {
+                    "name": name,
+                    "phone": phone,
+                    "company": company,
+                    "email": email,
+                    "lineid": lineid,
+                    "caption": caption,
+                    // "date": date,
+                    "agree": agree,
+                    "time": time
+                },
+                success: function (response) {
+                    if (response == "成功") {
+                        $('.loading-btn').hide();
+                        alert("成功提交！");
+                    }
+                },
+            });
+        }
+
+        $('#submitBtn').on('click', function (e) {
+            e.preventDefault();
+
+            let countryCode = document.querySelector('#countryCode').value;
+
+            // let demand = ""; // 需求目的
+            // if (document.querySelector('input[name="demandValue"]:checked')) {
+            //   demand = document.querySelector('input[name="demandValue"]:checked').value;
+            // }
+
+            // if (demand === "其他") {
+            //   demand = document.querySelector('#otherText').value;
+            // }
+
+            // 手動觸發表單提交
+            let form = $(this).closest('form');
+            form[0].reportValidity(); // 顯示瀏覽器內建錯誤提示
+
+            if (countryCode === "選擇國碼") {
+                console.log('表單未通過驗證');
+                $('.errorText').show();
+                return;
+            }
+
+            if (form[0].reportValidity()) {
+                $('.loading-btn').show();
+                $('.errorText').hide();
+                send();
+            }
+        });
+    </script>
+
+</body>
+
+</html>

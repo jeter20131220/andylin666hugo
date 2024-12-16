@@ -1,0 +1,21 @@
+<div class="hidden lg:block lg:col-span-1">
+    {{ $root := . }}
+    {{ with (default .Site.Params.widgets.widgets .Params.widgets) -}}
+    {{ range $widget := . }}
+    {{ $p := printf "widgets/%s.html" $widget }}
+    {{ partial $p $root }}
+    {{ end }}
+    {{ end }}
+    
+    {{ if .Type | eq "post" }}
+    <div class="tableofcontent" style="position: sticky; top: 20px;">
+        <div id="TableofContentScroll" class="bg-white tableofcontent-container-side dark:bg-warmgray-900 dark:text-white" >
+            <div class="mx-6">
+                <p id="TableofContentTitle" class="toc-title">目錄</p>
+                {{ .TableOfContents }}
+            </div>
+        </div>
+    </div>
+    {{end}}
+  
+</div>
