@@ -41,11 +41,10 @@ Flux.1 dev 需要用到 comfyui ，目前 AUTOMATIC1111 stable-diffusion-webui �
 
 ## CheckPoint
 
-檔案大小
-
 可以在 civitai上面來尋找自己想要的風格，按下載之後先cd 到 stable-diffusion-webui 然後將下載好的檔案丟到 /models/stable-diffusion就可以使用了。
 
 ## LoRA
+
 微模型
 
 * 可利用權重值來調整畫作的風格
@@ -54,6 +53,7 @@ Flux.1 dev 需要用到 comfyui ，目前 AUTOMATIC1111 stable-diffusion-webui �
 * 可以用少量圖片訓練自己的模型
 
 檔案大小
+
 ### 使用方法
 需要前往 
 <a target= _blank href="https://civitai.com/models">civitai</a>下載標籤為LoRA的。
@@ -82,13 +82,46 @@ example:
 
 Stable diffusion v1.5，跑出來的圖較為僵硬，就會比較假一點。那當然他的下一代 Stable Diffusion XL 就會好很多，但是如果要和專門產人物的models ChilloutMix比起來的話還是差蠻多的。
 
+
+
+### 人物領域
+
+#### ChilloutMix  
+
+類型CheckPoint
+
+剛剛有提到過的ChilloutMix這個CheckPoint，專門來生成高擬真人物的models，尤其是亞洲臉孔的美女，真的是蠻不錯的，prompt給的簡短的 beauty asian girl，都可以跑出非常不錯的人物。
+
+![ChilloutMix](/img/blog/ChilloutMix-1.webp)
+
+這裡的圖是直接使用，ChilloutMix去生成圖象，並沒有包含LoRA，只有使用easynegative、bad-hands-5這兩個embeddings而已。算出來的結果會非常乾淨細節也不錯。
+
+* https://civitai.com/models/6424/chilloutmix
+
+
+![ChilloutMix](/img/blog/ChilloutMix-3.webp)
+
+不過如果覺得感覺膩的，ChilloutMix也可以搭配LoRA使用，這裡的圖我是搭配Cute_girl_mix4這個LoRA使用。會感受到臉型不太一樣，會更加可愛一點。
+
+* https://civitai.com/models/14171/cutegirlmix4?ref=blog.256pages.com
+
+![ChilloutMix](/img/blog/ChilloutMix-2.webp)
+
+這裡我是使用了ChilloutMixss，這個LoRA，出來的妝感會比較重一點。
+
+* https://civitai.com/models/10850/chilloutmixss
+
+
 你以為Stable diffusion，生成式影像只能生成美女嗎，那妳就太小看它了，這邊就推薦幾個不同領域的 models給各位參考。
+
+LoRA，
 
 人物、亞洲、歐洲、二次元(還有其他你找得到的)賽博龐克
 
 * 二次元 Checkpoint https://blog.256pages.com/stable-diffusion-top3-anime-model/
 
-建築物 
+這個也可以推，ReV Animated
+
 
 ## 場景
 ### Bilgewater
@@ -100,6 +133,8 @@ Stable diffusion v1.5，跑出來的圖較為僵硬，就會比較假一點。�
 模型说明：场景风格模型。
 
 触发词：bilgewater
+
+## LyCORIS使用方法
 
 ### Concept Scenery Scene
 
@@ -199,13 +234,8 @@ OS:
 
 其實今天的進度還行啦，先把簡單的不同風格模型都完一次，然後再去好好研究ControlNet。        
 
-### 人物領域
 
 
-#### ChilloutMix  
-
- 
-剛剛有提到的ChilloutMix 專門來生成高擬真人物的models，我自己用下來真的是蠻不錯的，prompt給的簡短的 beauty asian girl，都可以跑出非常不錯的人人物。
 
 相關參考連結：
 * <a target="_blank" href="https://blog.256pages.com/stable-diffusion-basic-prompt-tutorial/">Stable Diffusion Prompt (基本篇)</a>
