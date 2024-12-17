@@ -258,3 +258,93 @@ MMI當中提到的從使用者、學生角度出發，從顧客的角度出發�
 因此我希望提供一系列的系統化學習，讓只要想學願意花時間的人，都能夠受到系統化的訓練。 名額有線，不久之後這些內容將會變成是付費內容。
 
 https://www.hububble.co/blog/utm
+
+
+## stable-diffusion
+
+## 阮一峰
+
+[如何用 Cloudflare 重定向 URL](https://codethoughts.io/posts/2024-07-31-redirecting-urls-with-cloudflare/)   
+
+[一个 JS 网页库，将 JSON 数据转成可视化的树状图。 jsontr.ee](https://jsontr.ee/)
+
+[免费的 AI 图像生成网站。（@aaamomo64 投稿）](https://bylo.ai/)
+
+[從頭開始學習Stable Diffusion：一個初學者指南](https://chrislee0728.medium.com/從頭開始學習stable-diffusion-一個初學者指南-ec34d7726a6c)
+
+
+很多人寫得很細，甚至是直接寫一連串的使用手冊，但是閱讀起來太多文章不太好入門，我目前的定位是要做一篇就購得這種文章，就是文章內容不要太多，幾乎都是重點。
+
+
+## controlNet
+
+### 安裝ControlNet 
+
+Installform URL
+
+以管理員身分執行終端機
+
+下載ControlNet的時候base model是否也需要放在資料夾當中。
+
+下載完的model 要放置在 **extensions/sd-webui-controlnet/models**
+
+### ControlNet 功能介紹 oponesoe
+使用ControlNet來修復變形手指
+
+* 手指過於纖細或畸形。
+* 手指數量錯誤（如六指）。
+* 手部結構與人體解剖學不符。
+
+可以提共一些範例圖片，讓user練習
+
+對比其他的修復方式，突顯 ControlNet 的優勢。
+
+ControlNet DWPose 修復手部
+
+DWPose 是 ControlNet Openpose 的強大預處理器，它可以提取人體姿勢，包括手部，您將需要 ControlNet 擴充功能和 OpenPose ControlNet 模型才能應用此方法修復手部。
+
+ControlNet Editor
+
+[ControlNet: A Complete Guide](https://stable-diffusion-art.com/controlnet/)
+
+[fix-hands](https://stable-diffusion-art.com/fix-hands/#Basic_Inpainting)
+
+### canny
+
+* openpose
+* Hand Refiner
+
+
+## ControlNet 
+ControlNet 的作用：控制生成圖像的結構或風格，增強模型的可控性。
+
+* 介紹如何使用 Web UI（例如 AUTOMATIC1111）來整合 ControlNet。
+* 必要的 Python 套件安裝步驟（如 torch, diffusers, controlnet 等）。
+
+在使用 Stable Diffusion 生成人物圖片時，手部細節（尤其是手指）經常出現以下問題：
+
+[controlnet-guide](https://stable-diffusion-art.com/controlnet/#Installing_Stable_Diffusion_ControlNet)
+
+用用看 ControlNet-HandRefiner-pruned
+
+
+
+OS:
+    先挑幾個，然後再去civitai找一些風格很酷的再補幾個
+
+OS:
+    每一個領域都弄幾張，就可以在部落格寫一篇長文，可以把這些圖放ig。controlNet應該可以單獨寫一篇，
+OS:
+    看多了應該也是可以提升自己的美感，反正我本來就喜歡跟外貌相關的東西，AI平面設計師應該也不錯。不知道有沒有生成網頁設計稿的models真讓人好奇。
+
+其實今天的進度還行啦，先把簡單的不同風格模型都完一次，然後再去好好研究ControlNet。    
+
+
+吉普力
+
+
+## 客製化 stable-diffusion-webui
+使用自己的UI搭配diffusion model來進行算圖。
+
+
+自從我學會生成式影像之後我幾乎沒有花任何圖庫的錢，缺什麼照片就自己算。真的非常方便(知識的獲取都是不可逆的)

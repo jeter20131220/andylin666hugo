@@ -1,7 +1,7 @@
 ---
 author: "andy"
 title: "stable-diffusion模型 推薦"
-image: "img/stable-diffusion-cover.webp"
+image: ""
 url: /stable-diffusion-model
 draft: false
 date: 2024-12-03
@@ -28,22 +28,53 @@ archives: ["2024/12"]
 
 
 
+
 ## Base models
+Stable Diffusion 模型的「核心」，能夠理解文本輸入（如 Prompt）並生成圖像。 是一個經過大規模數據集訓練的原始模型，具有最基礎的圖像生成能力。但是針對單一的主題、應用場景效果可能不會到非常理想。
+
 
 * Stable diffusion v1.5
 * Stable Diffusion XL
 * Flux.1 dev
 
-Flux.1 dev 需要用到 comfyui ，目前 AUTOMATIC1111 stable-diffusion-webui 還尚未支援 Flux.1 dev 
-
-檔案大小
+<!-- Flux.1 dev 需要用到 comfyui ，目前 AUTOMATIC1111 stable-diffusion-webui 還尚未支援 Flux.1 dev 。目前 -->
 
 
 ## CheckPoint
 
-可以在 civitai上面來尋找自己想要的風格，按下載之後先cd 到 stable-diffusion-webui 然後將下載好的檔案丟到 /models/stable-diffusion就可以使用了。
+Checkpoint 是指模型訓練過程中的保存點。是基於Base Model 微調後完整模型文件，微調通常針對特定風格、特定主題或應用場景，進行額外訓練。所以在特定的主題跟場景效果會比一般的Base models好非常多。 
+
+### CheckPoint使用方法
+
+要說到哪裡可以下載到最多種類的Checkpoint，非civitai莫屬了。
+* <a target= _blank href="https://civitai.com/models">civitai</a>
+
+點進去civitai後點選右上角的，**"Fliters"**，然後在 **"Model type"** 這裡勾選，**"Checkpoint"**，就 civitai上搜尋所有的CheckPoint。
+
+![civitai-checkpoint](/img/blog/civitai-checkpoint.webp)
+
+這裡也可以根據不同的主題與應用場景去搜尋，例如：Background(場景)
+Bulding(建築)、Colthing(服裝)、Style(風格)等等。
+
+![civitai-checkpoint](/img/blog/civitai-tag2.webp)
+
+點進去之後這邊可以看到，這個CheckPoint的資訊，類型、Base Model等的等，下載的按鈕也在這裡。
+
+![civitai-checkpoint](/img/blog/civitai-detail.webp)
+
+往下滑之後可以看到使用說明，所有的checkpoint使用方法都不太一樣，所以下載之前一定要看清楚，作者通常會在這裡說明用什麼參數、權重、以及需要可以什麼LoRA使用。
+
+![civitai-checkpoint](/img/blog/civitai-readme.webp)
+
+按下載之後先cd 到 stable-diffusion-webui 然後將下載好的檔案(.safetensors、.ckpt)丟到 **/models/stable-diffusion** 。在stable-diffusion-webui那邊按下，就可以使用了。
+
+(圖片)
+
+## Embedding
+Embedding 是一種詞嵌入技術，主要針對 文本提示詞（Prompts） 進行調整或優化。檔案大小大約落在 KB-MB。
 
 ## LoRA
+LoRA 是一種輕量化的模型微調方法。它不會改變 Base Model 本身的權重，而是透過額外的權重變換來調整模型行為。因此檔案會比較小大概落在幾百MB。
 
 微模型
 
@@ -54,9 +85,14 @@ Flux.1 dev 需要用到 comfyui ，目前 AUTOMATIC1111 stable-diffusion-webui �
 
 檔案大小
 
-### 使用方法
-需要前往 
-<a target= _blank href="https://civitai.com/models">civitai</a>下載標籤為LoRA的。
+### LoRA 使用方法
+
+這邊一樣要前往civitai
+<a target= _blank href="https://civitai.com/models">civitai</a>
+
+
+
+每個LoRA都有可能有要搭配使用的CheckPoint，還有權重值要給多少，所以在下載之前要看清楚底下的使用説明。
 
 將下載好的檔案，放在 **stable-diffusion-webui/models/LoRA**路經當中
 
@@ -92,38 +128,51 @@ Stable diffusion v1.5，跑出來的圖較為僵硬，就會比較假一點。�
 
 剛剛有提到過的ChilloutMix這個CheckPoint，專門來生成高擬真人物的models，尤其是亞洲臉孔的美女，真的是蠻不錯的，prompt給的簡短的 beauty asian girl，都可以跑出非常不錯的人物。
 
-![ChilloutMix](/img/blog/ChilloutMix-1.webp)
+![ChilloutMix](/img/blog/chilloutMix-1.webp)
 
-這裡的圖是直接使用，ChilloutMix去生成圖象，並沒有包含LoRA，只有使用easynegative、bad-hands-5這兩個embeddings而已。算出來的結果會非常乾淨細節也不錯。
+▲ 這裡的圖是直接使用，ChilloutMix去生成圖象，並沒有包含LoRA，只有使用easynegative、bad-hands-5這兩個embeddings而已。算出來的結果會非常乾淨細節也不錯。
 
-* https://civitai.com/models/6424/chilloutmix
-
-
-![ChilloutMix](/img/blog/ChilloutMix-3.webp)
-
-不過如果覺得感覺膩的，ChilloutMix也可以搭配LoRA使用，這裡的圖我是搭配Cute_girl_mix4這個LoRA使用。會感受到臉型不太一樣，會更加可愛一點。
-
-* https://civitai.com/models/14171/cutegirlmix4?ref=blog.256pages.com
-
-![ChilloutMix](/img/blog/ChilloutMix-2.webp)
-
-這裡我是使用了ChilloutMixss，這個LoRA，出來的妝感會比較重一點。
-
-* https://civitai.com/models/10850/chilloutmixss
+*  <a target="_blank" href="https://civitai.com/models/6424/chilloutmix">https://civitai.com/models/6424/chilloutmix</a>
 
 
-你以為Stable diffusion，生成式影像只能生成美女嗎，那妳就太小看它了，這邊就推薦幾個不同領域的 models給各位參考。
+![ChilloutMix](/img/blog/chilloutMix-3.webp)
 
-LoRA，
+▲ 不過如果覺得覺得膩了，ChilloutMix也可以搭配LoRA使用，這裡的圖我是搭配Cute_girl_mix4這個LoRA使用。會感受到臉型不太一樣，會更加可愛一點。
+
+*  <a target="_blank" href="https://civitai.com/models/14171/cutegirlmix4">https://civitai.com/models/14171/cutegirlmix4</a>
+
+![ChilloutMix](/img/blog/chilloutMix-2.webp)
+
+▲  這裡我是使用了ChilloutMixss，這個LoRA，出來的妝感會比較重一點。但是這個LoRA的權重不要給太重，大概落在0.4～0.7就好，
+`<lora:xiaoshazi:0.4>`，如果給太重會影響到面容。
+
+*  <a target="_blank" href="https://civitai.com/models/10850/chilloutmixss">https://civitai.com/models/10850/chilloutmixss</a>
+
 
 人物、亞洲、歐洲、二次元(還有其他你找得到的)賽博龐克
+
+你以為Stable diffusion，生成式影像只能生成美女嗎，那你就太小看它了，這邊就推薦幾個不同領域的 models給各位參考。
+
+部落格插圖使用，
+
 
 * 二次元 Checkpoint https://blog.256pages.com/stable-diffusion-top3-anime-model/
 
 這個也可以推，ReV Animated
 
+* Background
+* bulding
+* InteriorDesign
+* colthing
+* Product Design
+
+這幾張圖算完就可以更新這篇文章了，下一篇寫controlNet
 
 ## 場景
+
+吉卜力風格背景
+https://civitai.com/models/54233/ghiblibackground
+
 ### Bilgewater
 
 模型类别：LoRA 模型
@@ -224,19 +273,7 @@ Studio Ghibli Style
 
 
 
-OS:
-    先挑幾個，然後再去civitai找一些風格很酷的再補幾個
-
-OS:
-    每一個領域都弄幾張，就可以在部落格寫一篇長文，可以把這些圖放ig。controlNet應該可以單獨寫一篇，
-OS:
-    看多了應該也是可以提升自己的美感，反正我本來就喜歡跟外貌相關的東西，AI平面設計師應該也不錯。不知道有沒有生成網頁設計稿的models真讓人好奇。
-
-其實今天的進度還行啦，先把簡單的不同風格模型都完一次，然後再去好好研究ControlNet。        
-
-
-
-
+    
 相關參考連結：
 * <a target="_blank" href="https://blog.256pages.com/stable-diffusion-basic-prompt-tutorial/">Stable Diffusion Prompt (基本篇)</a>
 
@@ -248,65 +285,19 @@ Hires. fix 參數
 
 ChilloutMix 可以搭配那些LoRA使用，有一個韓國人臉型的應該可以試試看。
 
-## Checkpoint
-Checkpoint 是指模型訓練過程中的保存點。
 
-## ControlNet 
-ControlNet 的作用：控制生成圖像的結構或風格，增強模型的可控性。
 
-* 介紹如何使用 Web UI（例如 AUTOMATIC1111）來整合 ControlNet。
-* 必要的 Python 套件安裝步驟（如 torch, diffusers, controlnet 等）。
 
-在使用 Stable Diffusion 生成人物圖片時，手部細節（尤其是手指）經常出現以下問題：
 
-[](https://stable-diffusion-art.com/controlnet/#Installing_Stable_Diffusion_ControlNet)
+## prompt 數字代表的意思-權重解析
 
-## prompt 數字代表的意思
 
-### 安裝ControlNet 
 
-Installform URL
-
-以管理員身分執行終端機
-
-下載ControlNet的時候base model是否也需要放在資料夾當中。
-
-下載完的model 要放置在 **extensions/sd-webui-controlnet/models**
-
-### ControlNet 功能介紹 oponesoe
-使用ControlNet來修復變形手指
-
-* 手指過於纖細或畸形。
-* 手指數量錯誤（如六指）。
-* 手部結構與人體解剖學不符。
-
-可以提共一些範例圖片，讓user練習
-
-對比其他的修復方式，突顯 ControlNet 的優勢。
-
-ControlNet DWPose 修復手部
-
-DWPose 是 ControlNet Openpose 的強大預處理器，它可以提取人體姿勢，包括手部，您將需要 ControlNet 擴充功能和 OpenPose ControlNet 模型才能應用此方法修復手部。
-
-ControlNet Editor
-
-[ControlNet: A Complete Guide](https://stable-diffusion-art.com/controlnet/)
-
-[fix-hands](https://stable-diffusion-art.com/fix-hands/#Basic_Inpainting)
-
-### canny
-
-* openpose
-* Hand Refiner
 
 ## SD VAE(Variation autoencoder)
 有些模型本身自帶VAE
 
 
-
-
-
-##
 
 ## stable-diffusion 自動儲存 prompt 
 
@@ -346,18 +337,4 @@ HandRefiner 是用於修復手部的 ControlNet 模型。
     │   ├── model.py
     │   └── trainer.py
     └── README.md
-
-## 阮一峰
-
-[如何用 Cloudflare 重定向 URL](https://codethoughts.io/posts/2024-07-31-redirecting-urls-with-cloudflare/)   
-
-[一个 JS 网页库，将 JSON 数据转成可视化的树状图。 jsontr.ee](https://jsontr.ee/)
-
-[免费的 AI 图像生成网站。（@aaamomo64 投稿）](https://bylo.ai/)
-
-[從頭開始學習Stable Diffusion：一個初學者指南](https://chrislee0728.medium.com/從頭開始學習stable-diffusion-一個初學者指南-ec34d7726a6c)
-
-
-很多人寫得很細，甚至是直接寫一連串的使用手冊，但是閱讀起來太多文章不太好入門，我目前的定位是要做一篇就購得這種文章，就是文章內容不要太多，幾乎都是重點。
-
 
