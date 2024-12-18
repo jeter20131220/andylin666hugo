@@ -1,13 +1,13 @@
 ---
 author: "andy"
-title: "stable-diffusion模型 推薦"
+title: "探索 Stable Diffusion WebUI 模型分類：推薦的各領域 Checkpoint與LoRA"
 image: ""
 url: /stable-diffusion-model
 draft: false
-date: 2024-12-03
-description: "本篇教學將指導你如何在 Google Colab 和本地端安裝 Stable Diffusion Web UI，輕鬆設置並運行 AI 圖像生成，快速創作高質量數位藝術作品。"
+date: 2024-12-18
+description: "大幅提升 Stable Diffusion 創作效果！深入了解 Checkpoint 與 LoRA 的使用方法，探索各領域最佳推薦模型，全面升級影像品質！"
 tags: ["stable-diffusion"]
-archives: ["2024/12"]
+archives: ["2024/12/18"]
 ---
 
 ## Stable diffusion 
@@ -18,13 +18,11 @@ archives: ["2024/12"]
 * Diffusion 模型
 * VAE模型
 
-利用CLIP模型，將文字轉向量作為輸入
+利用CLIP模型，將文字轉向量作為輸，什麼是CLIP 模型
 
-什麼是CLIP 模型
-
-* LoRA
-* CheckPoint 
-* Base Model
+* LoRA： 一種輕量化的模型微調技術，用於添加特定風格或主題調整。
+* Checkpoint： Stable Diffusion 的核心模型檔案，決定生成影像的風格與效果。
+* Base Model： 未經微調的原始模型，適合作為創作的通用基礎。
 
 
 
@@ -32,6 +30,7 @@ archives: ["2024/12"]
 ## Base models
 Stable Diffusion 模型的「核心」，能夠理解文本輸入（如 Prompt）並生成圖像。 是一個經過大規模數據集訓練的原始模型，具有最基礎的圖像生成能力。但是針對單一的主題、應用場景效果可能不會到非常理想。
 
+檔案大小:4-10+GB不等
 
 * Stable diffusion v1.5
 * Stable Diffusion XL
@@ -43,6 +42,8 @@ Stable Diffusion 模型的「核心」，能夠理解文本輸入（如 Prompt�
 ## CheckPoint
 
 Checkpoint 是指模型訓練過程中的保存點。是基於Base Model 微調後完整模型文件，微調通常針對特定風格、特定主題或應用場景，進行額外訓練。所以在特定的主題跟場景效果會比一般的Base models好非常多。 
+
+檔案大小:2-7+GB
 
 ### CheckPoint使用方法
 
@@ -66,24 +67,38 @@ Bulding(建築)、Colthing(服裝)、Style(風格)等等。
 
 ![civitai-checkpoint](/img/blog/civitai-readme.webp)
 
-按下載之後先cd 到 stable-diffusion-webui 然後將下載好的檔案(.safetensors、.ckpt)丟到 **/models/stable-diffusion** 。在stable-diffusion-webui那邊按下，就可以使用了。
+按下載之後先cd 到 stable-diffusion-webui 然後將下載好的檔案(.safetensors、.ckpt)丟到<br> `stable-diffusion-webui/models/stable-diffusion` 。在stable-diffusion-webui那邊按下，就可以使用了。
 
 (圖片)
 
-## Embedding
-Embedding 是一種詞嵌入技術，主要針對 文本提示詞（Prompts） 進行調整或優化。檔案大小大約落在 KB-MB。
+## Embedding(Textual inversion)
+Embedding 是一種詞嵌入技術，主要針對 文本提示詞（Prompts） 進行調整或優化。簡單來說就是將非常多常用的提示詞變成文字合集。
+
+檔案大小：KB-MB。
+
+比較常用的就是easynegative、bad-hands-5，這兩個都是作為負面提示詞(negative prompt)使用，easynegative是由許多算壞圖片負面提示詞合集，bad-hands-5是針對手指變形的負面提示詞。
+
+* <a target="_blank" href="https://civitai.com/models/7808/easynegative">easynegative</a>
+* <a target="_blank" href="https://civitai.com/models/116230/bad-hands-5">bad-hands-5</a>
+
+下載下來之後(.pt)，要放在**stable-diffusion-webui\embeddings** 
+
+## (補充webui圖片)
+
+(持續更新)
 
 ## LoRA
 LoRA 是一種輕量化的模型微調方法。它不會改變 Base Model 本身的權重，而是透過額外的權重變換來調整模型行為。因此檔案會比較小大概落在幾百MB。
 
-微模型
+檔案大小:幾百MB
 
+微模型
 * 可利用權重值來調整畫作的風格
 * 無法單獨使用 需要搭配 CheckPoint 
 * 檔案小 運算資源消耗少
 * 可以用少量圖片訓練自己的模型
 
-檔案大小
+
 
 ### LoRA 使用方法
 
@@ -119,12 +134,9 @@ example:
 Stable diffusion v1.5，跑出來的圖較為僵硬，就會比較假一點。那當然他的下一代 Stable Diffusion XL 就會好很多，但是如果要和專門產人物的models ChilloutMix比起來的話還是差蠻多的。
 
 
+### ChilloutMix (亞洲臉孔美女)
 
-### 人物領域
-
-#### ChilloutMix  
-
-類型CheckPoint
+類型:CheckPoint
 
 剛剛有提到過的ChilloutMix這個CheckPoint，專門來生成高擬真人物的models，尤其是亞洲臉孔的美女，真的是蠻不錯的，prompt給的簡短的 beauty asian girl，都可以跑出非常不錯的人物。
 
@@ -132,21 +144,21 @@ Stable diffusion v1.5，跑出來的圖較為僵硬，就會比較假一點。�
 
 ▲ 這裡的圖是直接使用，ChilloutMix去生成圖象，並沒有包含LoRA，只有使用easynegative、bad-hands-5這兩個embeddings而已。算出來的結果會非常乾淨細節也不錯。
 
-*  <a target="_blank" href="https://civitai.com/models/6424/chilloutmix">https://civitai.com/models/6424/chilloutmix</a>
+*  <a target="_blank" href="https://civitai.com/models/6424/chilloutmix">chilloutmix</a>
 
 
 ![ChilloutMix](/img/blog/chilloutMix-3.webp)
 
 ▲ 不過如果覺得覺得膩了，ChilloutMix也可以搭配LoRA使用，這裡的圖我是搭配Cute_girl_mix4這個LoRA使用。會感受到臉型不太一樣，會更加可愛一點。
 
-*  <a target="_blank" href="https://civitai.com/models/14171/cutegirlmix4">https://civitai.com/models/14171/cutegirlmix4</a>
+*  <a target="_blank" href="https://civitai.com/models/14171/cutegirlmix4">cutegirlmix4</a>
 
 ![ChilloutMix](/img/blog/chilloutMix-2.webp)
 
 ▲  這裡我是使用了ChilloutMixss，這個LoRA，出來的妝感會比較重一點。但是這個LoRA的權重不要給太重，大概落在0.4～0.7就好，
 `<lora:xiaoshazi:0.4>`，如果給太重會影響到面容。
 
-*  <a target="_blank" href="https://civitai.com/models/10850/chilloutmixss">https://civitai.com/models/10850/chilloutmixss</a>
+*  <a target="_blank" href="https://civitai.com/models/10850/chilloutmixss">chilloutmixss</a>
 
 
 人物、亞洲、歐洲、二次元(還有其他你找得到的)賽博龐克
@@ -168,24 +180,13 @@ Stable diffusion v1.5，跑出來的圖較為僵硬，就會比較假一點。�
 
 這幾張圖算完就可以更新這篇文章了，下一篇寫controlNet
 
-## 場景
+
 
 吉卜力風格背景
 https://civitai.com/models/54233/ghiblibackground
 
-### Bilgewater
 
-模型类别：LoRA 模型
-
-下载地址： https://civitai.com/models/23344?modelVersionId=27879
-
-模型说明：场景风格模型。
-
-触发词：bilgewater
-
-## LyCORIS使用方法
-
-### Concept Scenery Scene
+### Concept Scenery Scene 
 
 模型类别：LoRA 模型
 
@@ -226,6 +227,8 @@ https://civitai.com/models/54233/ghiblibackground
 
 向量圖
 
+
+### 吉卜力
 有宮崎駿迷的!一定要玩這個(吉卜力)
 
 Studio Ghibli Style
@@ -237,9 +240,10 @@ Studio Ghibli Style
 模型说明：吉卜力风格模型。
 
 
-新海誠風格
+
 ### Makoto Shinkai
 
+新海誠風格
 模型类别：LoRA 模型
 
 下载地址：https://civitai.com/models/10626/makoto-shinkai-substyles-style-lora
@@ -253,7 +257,6 @@ Studio Ghibli Style
 
 * [ReV Animated]( https://civitai.com/models/7371?modelVersionId=46846)
 
-## 室內設計
 
 ### XSarchitectral-InteriorDesign-ForXSLora
 
@@ -287,54 +290,19 @@ ChilloutMix 可以搭配那些LoRA使用，有一個韓國人臉型的應該可�
 
 
 
+## 結論
 
-
+<!-- 
 ## prompt 數字代表的意思-權重解析
 
 
 
 
 ## SD VAE(Variation autoencoder)
-有些模型本身自帶VAE
+有些模型本身自帶VAE -->
 
 
 
-## stable-diffusion 自動儲存 prompt 
-
-在圖片旁邊產生一個txt檔案，
 
 
-1.使用 Stable Diffusion 基本修復功能修復手部
-
-Stable Diffusion 產生的圖片透過點擊圖片下方的傳送到Inpaint 按鈕將此圖片傳送到Inpainting，或點擊img2img – Generation – Inpaint 標籤遮蓋您想要再生的區域，為了讓修復效果更好，一次只固定一隻手，將修復區域設定為整個圖片，將降噪強度設定為0.5。
-
-
-
-3、HandRefiner 修復手部
-
-HandRefiner 是用於修復手部的 ControlNet 模型。
-
-參考連結
-* [Stable Diffusion基礎 -- 局部重繪（inpaint）](https://vocus.cc/article/64770591fd89780001729605)
-
-## Stable Diffusion 目錄架構
-
-    ├── .venv  
-    │   ├── bin
-    │   ├── include
-    │   ├── lib
-    │   └── share
-    ├── data
-    │   └── diffusion
-    │       ├── checkpoints
-    │       ├── samples
-    │       └── training
-    ├── stable_diffusion
-    │   ├── __init__.py
-    │   ├── config.py
-    │   ├── diffusion.py
-    │   ├── loss.py
-    │   ├── model.py
-    │   └── trainer.py
-    └── README.md
 

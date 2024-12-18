@@ -348,3 +348,41 @@ OS:
 
 
 自從我學會生成式影像之後我幾乎沒有花任何圖庫的錢，缺什麼照片就自己算。真的非常方便(知識的獲取都是不可逆的)
+
+## stable-diffusion 自動儲存 prompt 
+
+在圖片旁邊產生一個txt檔案，
+
+
+1.使用 Stable Diffusion 基本修復功能修復手部
+
+Stable Diffusion 產生的圖片透過點擊圖片下方的傳送到Inpaint 按鈕將此圖片傳送到Inpainting，或點擊img2img – Generation – Inpaint 標籤遮蓋您想要再生的區域，為了讓修復效果更好，一次只固定一隻手，將修復區域設定為整個圖片，將降噪強度設定為0.5。
+
+3、HandRefiner 修復手部
+
+HandRefiner 是用於修復手部的 ControlNet 模型。
+
+參考連結
+* [Stable Diffusion基礎 -- 局部重繪（inpaint）](https://vocus.cc/article/64770591fd89780001729605)
+
+## Stable Diffusion 目錄架構
+
+    ├── .venv  
+    │   ├── bin
+    │   ├── include
+    │   ├── lib
+    │   └── share
+    ├── data
+    │   └── diffusion
+    │       ├── checkpoints
+    │       ├── samples
+    │       └── training
+    ├── stable_diffusion
+    │   ├── __init__.py
+    │   ├── config.py
+    │   ├── diffusion.py
+    │   ├── loss.py
+    │   ├── model.py
+    │   └── trainer.py
+    └── README.md
+## LyCORIS使用方法
