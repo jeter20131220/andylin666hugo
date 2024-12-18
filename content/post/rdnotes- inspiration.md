@@ -386,3 +386,26 @@ HandRefiner 是用於修復手部的 ControlNet 模型。
     │   └── trainer.py
     └── README.md
 ## LyCORIS使用方法
+
+
+
+人物、亞洲、歐洲、二次元(還有其他你找得到的)賽博龐克、部落格插圖使用，
+
+
+這個也可以推，ReV Animated
+
+* Background
+* bulding
+* InteriorDesign
+* colthing
+* Product Design
+
+這幾張圖算完就可以更新這篇文章了，下一篇寫controlNet
+
+
+Hires. fix 參數
+
+* 問題一 遇到手指很容易變形
+* 安裝controlnet  webui有問題
+
+ChilloutMix 可以搭配那些LoRA使用，有一個韓國人臉型的應該可以試試看。

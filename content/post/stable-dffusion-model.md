@@ -1,7 +1,7 @@
 ---
 author: "andy"
 title: "探索 Stable Diffusion WebUI 模型分類：推薦的各領域 Checkpoint與LoRA"
-image: ""
+image: "img/stable-diffusion-checkpoint.webp"
 url: /stable-diffusion-model
 draft: false
 date: 2024-12-18
@@ -12,13 +12,13 @@ archives: ["2024/12/18"]
 
 ## Stable diffusion 
 
-簡單來說就是一個文字生成圖像的模型，diffusion 為擴散模型
+簡單來說就是一個文字生成圖像的模型，diffusion 為擴散模型，而我們再算圖會比較常使用到，LoRA、Checkpoint、Base Model。
 
-* CLIP 模型
+<!-- * CLIP 模型
 * Diffusion 模型
 * VAE模型
 
-利用CLIP模型，將文字轉向量作為輸，什麼是CLIP 模型
+利用CLIP模型，將文字轉向量作為輸，什麼是CLIP 模型 -->
 
 * LoRA： 一種輕量化的模型微調技術，用於添加特定風格或主題調整。
 * Checkpoint： Stable Diffusion 的核心模型檔案，決定生成影像的風格與效果。
@@ -83,9 +83,9 @@ Embedding 是一種詞嵌入技術，主要針對 文本提示詞（Prompts） �
 
 下載下來之後(.pt)，要放在**stable-diffusion-webui\embeddings** 
 
-## (補充webui圖片)
 
-(持續更新)
+
+
 
 ## LoRA
 LoRA 是一種輕量化的模型微調方法。它不會改變 Base Model 本身的權重，而是透過額外的權重變換來調整模型行為。因此檔案會比較小大概落在幾百MB。
@@ -131,8 +131,11 @@ example:
 這邊舉個例子：我用差不多的提示詞在Stable diffusion v1.5 跑出來的結果與我用ChilloutMix這個models跑出來的品質就有差。
 
 
-Stable diffusion v1.5，跑出來的圖較為僵硬，就會比較假一點。那當然他的下一代 Stable Diffusion XL 就會好很多，但是如果要和專門產人物的models ChilloutMix比起來的話還是差蠻多的。
+Stable diffusion v1.5，跑出來的圖較為僵硬，就會比較假一點，特定領域、應用場景上使用已經訓練好的CheckPoint去算圖也是不錯的選擇。
 
+雖然Stable diffusion v1.5的下一代 Stable Diffusion XL非常厲害，但是基於Stable diffusion v1.5 訓練出來的CheckPoint在特定領域下，也可以生成不下於Stable Diffusion XL的影像品質哦。
+
+這邊我會推薦幾個我有使用過的CheckPoint，也會附上我使用過後德成品。
 
 ### ChilloutMix (亞洲臉孔美女)
 
@@ -161,24 +164,23 @@ Stable diffusion v1.5，跑出來的圖較為僵硬，就會比較假一點。�
 *  <a target="_blank" href="https://civitai.com/models/10850/chilloutmixss">chilloutmixss</a>
 
 
-人物、亞洲、歐洲、二次元(還有其他你找得到的)賽博龐克
+
+### Realistic Vision (真人風格)
+Realistic Vision 是Stable Diffusion 1.5 訓練的模型，能夠產生高度擬真風格、高細節的圖片，非常擅長動物與人像。
+
+Realistic Vision 可以搭配這個LoRA使用，
+ <a target="_blank" href="https://civitai.com/models/58390/detail-tweaker-lora-lora">Detail Tweaker LoRA </a>
+
+
+我算完真的有被嚇到....這真的是AI嗎，真的不是傳一張世界某個角落的人像照片給我嗎。但是Realistic Vision 再生成純背景的時候，例如自然景觀的時候就比較不適合了。
 
 你以為Stable diffusion，生成式影像只能生成美女嗎，那你就太小看它了，這邊就推薦幾個不同領域的 models給各位參考。
 
-部落格插圖使用，
+
 
 
 * 二次元 Checkpoint https://blog.256pages.com/stable-diffusion-top3-anime-model/
 
-這個也可以推，ReV Animated
-
-* Background
-* bulding
-* InteriorDesign
-* colthing
-* Product Design
-
-這幾張圖算完就可以更新這篇文章了，下一篇寫controlNet
 
 
 
@@ -281,12 +283,6 @@ Studio Ghibli Style
 * <a target="_blank" href="https://blog.256pages.com/stable-diffusion-basic-prompt-tutorial/">Stable Diffusion Prompt (基本篇)</a>
 
 
-Hires. fix 參數
-
-* 問題一 遇到手指很容易變形
-* 安裝controlnet  webui有問題
-
-ChilloutMix 可以搭配那些LoRA使用，有一個韓國人臉型的應該可以試試看。
 
 
 
