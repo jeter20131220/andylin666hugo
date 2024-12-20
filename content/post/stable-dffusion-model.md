@@ -239,7 +239,7 @@ ghibli style, san \(mononoke hime\), 1girl, armlet, bangs, black hair, black und
 
 最好是把外觀描述得越詳細越好，然後前面還要提到動漫名稱以及角色名稱。san \(mononoke hime\)
 
-## Fantasy World
+### Fantasy World
 **模型說明：** 二次元遊戲場景。
 
 **模型類型**：CheckPoint
