@@ -296,6 +296,6 @@ stable-diffusion-xl-base-1.0、stable-diffusion-v1-5。
 <!-- ## SD1.5 vs SDXL -->
 
 
-
+<!-- 
 Stable-diffusion web UI  Error
-ImportError: cannot import name 'Undefined' from 'pydantic.fields' ImportError: cannot i
+ImportError: cannot import name 'Undefined' from 'pydantic.fields' ImportError: cannot i -->
