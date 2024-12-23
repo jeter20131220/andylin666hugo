@@ -1,3 +1,15 @@
+---
+author: "andy"
+title: "完整 Stable Diffusion 教學：從 Colab 到本地端，快速上手 Web UI 生成精美圖像"
+image: "img/stable-diffusion-cover.webp"
+url: /stable-diffusion
+draft: true
+date: 2024-12-03
+description: "本篇教學將指導你如何在 Google Colab 和本地端安裝 Stable Diffusion Web UI，輕鬆設置並運行 AI 圖像生成，快速創作高質量數位藝術作品。"
+tags: ["stable-diffusion"]
+archives: ["2024/12"]
+---
+
 ## AI變現
 普通人如何利用AI赚钱 - 技能研究所的文章 - 知乎
 https://zhuanlan.zhihu.com/p/713669105?zpf=1816512738878431232
