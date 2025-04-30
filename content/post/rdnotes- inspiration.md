@@ -409,3 +409,51 @@ Hires. fix 參數
 * 安裝controlnet  webui有問題
 
 ChilloutMix 可以搭配那些LoRA使用，有一個韓國人臉型的應該可以試試看。
+
+
+Deep Learning with PyTorc 
+
+PyTorc介紹文章
+
+
+語義檢索（Semantic Search）
+語義檢索技術主要用於從大規模數據集中快速識別出與特定查詢語義上最相關的信息片段
+
+從0-1的完整流程是什麼
+
+
+* semantic_cache (semantic search技術)
+* OpenAI 的 Embedding
+  * https://technicalwriting.dev/data/embeddings.html
+* 詞語之間的語意關聯 
+* ML/DL差別
+* 向量維度差別
+* 盤點whisper的應用
+* VAD
+* x間你該知道的生成式Ai公司
+* 生成式ai模型 有哪些
+* local llm
+* Stable Diffusion （參數說明 適當值介紹）
+  * fine-tuning
+  * https://civitai.com/
+  * ControlNet + stable diffusion 
+  * 什麼是CUDA
+  * 基礎教學
+  * finetune 客製化 訓練
+  * prompt攻略
+* flux
+* flux vs stable Diffusion 比較
+* huggingface 介紹
+  * 盤點10個huggingfac上，不容錯過的有趣專案
+* GitHub Copilot 
+* 研究如何讓自己部落格看起來有 codeblock vscode的感覺。
+
+關聯式資料庫 (Relational database)
+
+上述題材應該可以產生不少篇文章\
+
+
+## fine tuing、controlnet、RAG、Pytorch、Tensorflow、
+AI提升生產力，
+
+
